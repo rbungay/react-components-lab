@@ -44,7 +44,9 @@ const App = () => {
     <>
       <h1>Local Weather</h1>
       <section>
-        <WeatherForecast />
+        {weatherForecasts.map((weather) => (
+          <WeatherForecast key={weather.day} {...weather} />
+        ))}
       </section>
     </>
   );
